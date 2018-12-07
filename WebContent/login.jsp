@@ -17,7 +17,7 @@ table td:hover { border:1px solid #000; }
 <tr><td>ID</td><td><input type="text" name="login_id" value="" ></td>
 </tr>
 <tr><td>PASSWORD</td><td><input type="password" name="login_pw" value=""></td>
-</tr>
+</tr> 
 </table>
 
 
