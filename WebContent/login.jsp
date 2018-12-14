@@ -8,11 +8,12 @@
 </head>
 <body>
 <style>
-table {border-collapse:collapse;width:100%;}
+table {border-collapse:collapse;width:500px;}
 table td {border:1px solid #ccc; padding:10px; width:25%; box-sizing:border-box; }
 table td:hover { border:1px solid #000; }
 </style>
 <h3>·Î±×ÀÎ</h3> 
+
 <table style="border:1px;border-color:red" >
 <tr><td>ID</td><td><input type="text" name="login_id" value="" ></td>
 </tr>
@@ -20,11 +21,6 @@ table td:hover { border:1px solid #000; }
 </tr> 
 </table>
 
-
-ID <input type="text" name="login_id" value="" >
-<br>
-PASSWORD <input type="password" name="login_pw" value="">
-
-
+ 
 </body>
 </html>
