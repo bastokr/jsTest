@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<style>
+<style> 
 table {border-collapse:collapse;width:500px;}
 table td {border:1px solid #ccc; padding:10px; width:25%; box-sizing:border-box; }
 table td:hover { border:1px solid #000; }
