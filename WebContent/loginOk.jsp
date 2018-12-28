@@ -3,10 +3,12 @@
 <%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <%
-String id=request.getParameter("id");
+String id=request.getParameter("login_id");
 
-String passwd=request.getParameter("passwd");
+String passwd=request.getParameter("login_pw");
 out.println(id+" //// "+passwd);
+
+Boolean isLoginOK=false; 
  
 %>
 
@@ -31,9 +33,11 @@ out.println(id+" //// "+passwd);
     while (rs.next()) { 
   	     id =rs.getString("id");
  	     passwd=rs.getString("passwd");
- 	    out.println(id);
+ 	    out.println("정상적으로 로그인 되었습니다."+id);
+ 	    
+ 	   isLoginOK=true;
      }
-     //out.println(ii);
+   out.println(isLoginOK);	
  %>
  
  
@@ -59,10 +63,23 @@ out.println(id+" //// "+passwd);
 </head>
 <body>
 <script>
+ <% if(isLoginOK==true) { 
+	 String      str=" alert(\"정상적으로 로그인되었습니다.\"); ";
+			 str=str+" window.location.href=\"index.jsp\";  ";
+			 
+	         out.println(str);
+	  
+	  
+  } %> 
+  
+  
+  <% if(isLoginOK==false) { %>
+ 		 alert("로그인 정보가 잘못되었습니다.");
+   		 history.back();
 
-//alert("저장되었씁니다.");
-
-
+   <% } %> 
+   
+   
 //window.location.href="./index.jsp";
 </script>
  
