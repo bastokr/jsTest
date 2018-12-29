@@ -28,7 +28,12 @@
  
 사용자명 : 
 <%
-out.println(session.getAttribute("name"));
+if(session.getAttribute("name")==null){
+	out.println("");
+} else {
+	out.println(session.getAttribute("name"));
+}
+ 
  
 %>
  
@@ -81,7 +86,10 @@ function  Mywrite(){
  
  
  <%  if(session.getAttribute("id")==null){ %>
-	window.location.href="login.jsp";
+  if(confirm("로그아웃 상태입니다 로그인 하시겠습니까?")){
+	  window.location.href="login.jsp";
+  }	
+ 
 
 <%  }  %>
  

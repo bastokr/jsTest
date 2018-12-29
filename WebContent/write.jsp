@@ -1,7 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
  
+ <%
+ String id="";
+ String name="";
  
+ name=(String)session.getAttribute("name");
+  
+ 	
+ 
+ %>
 
     
 <!DOCTYPE html>
@@ -15,7 +23,8 @@
 <h1>글쓰기</h1> 
  <form action="insert.jsp"  method="post"> 
 
- 
+이름:<input type="text" name="writer" value="<%=name %>"  readonly> 
+<br>
 제목:<input type="text" name="title"   > 
 <br><br>
 내용:<textarea   name="conts"  cols="80" rows="10">입력값을 넣어주세요</textarea>

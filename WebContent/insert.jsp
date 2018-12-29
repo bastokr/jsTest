@@ -8,6 +8,9 @@ String title=request.getParameter("title");
 
 String conts=request.getParameter("conts");
 
+String id="";
+
+id=(String)session.getAttribute("id");
 %>
 <%@ include file="./dbconnect.jsp" %>
 
@@ -20,7 +23,7 @@ String conts=request.getParameter("conts");
 		   db_id, db_pw);
    Statement stmt = Con.createStatement();
    // select 문장을 문자열 형태로 구성
-   String sql = "INSERT INTO  BOARD (SEQ,TITLE, CONTS) VALUES(board_idx.nextval,'"+title+"','"+conts+"')";
+   String sql = "INSERT INTO  BOARD (SEQ,TITLE, CONTS,EMPNO) VALUES(board_idx.nextval,'"+title+"','"+conts+"')";
    
    out.println(sql);
 
