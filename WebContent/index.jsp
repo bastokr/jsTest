@@ -17,7 +17,7 @@
      "scott", "tiger");
    Statement stmt = Con.createStatement();
    // select 문장을 문자열 형태로 구성
-   String sql = "SELECT SEQ,TITLE,CONTS FROM BOARD";
+   String sql = "SELECT SEQ,TITLE,CONTS FROM BOARD order by seq desc";
 
    // select문을 수행하면 데이터정보가 resultset 클래스 인스턴스로 리턴
    ResultSet rs = stmt.executeQuery(sql);
