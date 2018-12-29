@@ -9,3 +9,8 @@
   String  db_pw="tiger";
   
   %>
+  <%
+String seq=request.getParameter("seq"); 
+
+%> 
+  
