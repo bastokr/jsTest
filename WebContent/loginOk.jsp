@@ -29,15 +29,21 @@ Boolean isLoginOK=false;
    String sql = "SELECT * FROM EMP WHERE ID='"+id+"' AND  PASSWD='"+passwd+"'" ;
    		   
    out.println(sql);
-  ResultSet rs = stmt.executeQuery(sql);
+   ResultSet rs = stmt.executeQuery(sql);
+   String name="";
     while (rs.next()) { 
   	     id =rs.getString("id");
  	     passwd=rs.getString("passwd");
+ 	      name=rs.getString("ename");
  	    out.println("정상적으로 로그인 되었습니다."+id);
+ 	    session.setAttribute("id", id);
+ 	    session.setAttribute("name", name);
  	    
  	   isLoginOK=true;
      }
    out.println(isLoginOK);	
+   
+  
  %>
  
  

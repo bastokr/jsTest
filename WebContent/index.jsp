@@ -24,6 +24,14 @@
  %>
 
  <h3>Department 테이블</h3>
+ 
+ 
+사용자명 : 
+<%
+out.println(session.getAttribute("name"));
+ 
+%>
+ 
  <table border="1">
   <tr>
    <td>순번</td>
@@ -68,9 +76,14 @@
 <script>
 
 function  Mywrite(){
-	
-	window.location.href="write.jsp";
+ window.location.href="write.jsp";
 }
+ 
+ 
+ <%  if(session.getAttribute("id")==null){ %>
+	window.location.href="login.jsp";
+
+<%  }  %>
  
 
 </script>
