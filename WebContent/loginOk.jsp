@@ -10,17 +10,17 @@ out.println(id+" //// "+passwd);
 
 Boolean isLoginOK=false; 
  
-%>
+%> 
+<%@ include file="./dbconnect.jsp" %>
 
-
+  
  <%
-  Class.forName("oracle.jdbc.driver.OracleDriver");
-  String url = "jdbc:oracle:thin:@localhost:1521:gonjiam";
+ 
   int i = 0;
   try {
    // DB 서버에 connection
    Connection Con = DriverManager.getConnection(url,
-     "scott", "tiger");
+     db_id, db_pw);
    Statement stmt = Con.createStatement();
    // select 문장을 문자열 형태로 구성
   // String sql = "INSERT INTO  BOARD (SEQ,TITLE, CONTS) VALUES(board_idx.nextval,'"+title+"','"+conts+"')";
